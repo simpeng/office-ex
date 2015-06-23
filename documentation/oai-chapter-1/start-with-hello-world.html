@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<meta name="keywords" content="Office 2013 App,Office 扩展应用, Office 插件开发, 跨Office 平台应用, 
+									simpeng, simpeng.net, Office Add-In, App for Office" />
+    <meta name="description" content="Office 2013 App,Office 扩展应用, Office 插件开发, 跨Office 平台应用, 
+									simpeng, simpeng.net, Office Add-In, App for Office" />
+    <meta name="author" content="">
+
+    <title>Hello World 应用 - Office 扩展应用文档</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+  </head>
+
+  <body>
+  
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar" type="button" data-toggle="collapse" data-target="#left-nav-sidebar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">开发 Office 平台上的扩展应用</a>
+        </div>
+      </div>
+    </nav>
+
+	<div class="container-fluid">
+      <div class="row">
+        <div id="left-nav-sidebar" class="col-sm-12 col-xs-12 col-md-2 sidebar collapse">
+          <ul class="nav nav-sidebar">
+			<li id="oai-chapter-1" class="active oai-chapter-row"><a>什么是 Office 扩展应用</a></li>
+<li id="oai-chapter-1-section-1" class="oai-chapter-1-section oai-chapter-section-row activedSectionRow "><a href="../oai-chapter-1/office-addin-introduction.html?s=oai-chapter-1-section-1">扩展应用简介</a></li>
+<li id="oai-chapter-1-section-2" class="oai-chapter-1-section oai-chapter-section-row  "><a href="../oai-chapter-1/start-with-hello-world.html?s=oai-chapter-1-section-2">Hello World 应用</a></li>
+<li id="oai-chapter-1-section-3" class="oai-chapter-1-section oai-chapter-section-row  "><a href="../oai-chapter-1/office-addin-types-and-current-platoform-supporting.html?s=oai-chapter-1-section-3">扩展应用类型及平台支持</a></li>
+<li id="oai-chapter-1-section-4" class="oai-chapter-1-section oai-chapter-section-row  "><a href="../oai-chapter-1/compare-office-addin-with-vba-and-vsto.html?s=oai-chapter-1-section-4">与VBA、VSTO的区别</a></li>
+<li id="oai-chapter-1-section-5" class="oai-chapter-1-section oai-chapter-section-row  "><a href="../oai-chapter-1/office-addin-data-sources.html?s=oai-chapter-1-section-5">Office 扩展应用的数据源</a></li>
+<li id="oai-chapter-2" class="active oai-chapter-row"><a>Office 文档操作 API</a></li>
+<li id="oai-chapter-2-section-1" class="oai-chapter-2-section oai-chapter-section-row activedSectionRow "><a href="../oai-chapter-2/word-addin-API.html?s=oai-chapter-2-section-1">Word 文档 API</a></li>
+<li id="oai-chapter-2-section-2" class="oai-chapter-2-section oai-chapter-section-row  "><a href="../oai-chapter-2/excel-addin-API.html?s=oai-chapter-2-section-2">Excel 文档 API</a></li>
+<li id="oai-chapter-2-section-3" class="oai-chapter-2-section oai-chapter-section-row  "><a href="../oai-chapter-2/powerpoint-addin-API.html?s=oai-chapter-2-section-3">PowerPoint 文档 API</a></li>
+<li id="oai-chapter-2-section-4" class="oai-chapter-2-section oai-chapter-section-row  "><a href="../oai-chapter-2/outlook-addin-API.html?s=oai-chapter-2-section-4">邮件文档 API</a></li>
+<li id="oai-chapter-2-section-5" class="oai-chapter-2-section oai-chapter-section-row  "><a href="../oai-chapter-2/access-addin-API.html?s=oai-chapter-2-section-5">Access 文档 API</a></li>
+<li id="oai-chapter-2-section-6" class="oai-chapter-2-section oai-chapter-section-row  "><a href="../oai-chapter-2/project-addin-API.html?s=oai-chapter-2-section-6">Project 文档 API</a></li>
+<li id="oai-chapter-3" class="active oai-chapter-row"><a>Office 365 API</a></li>
+<li id="oai-chapter-3-section-1" class="oai-chapter-3-section oai-chapter-section-row activedSectionRow "><a href="../oai-chapter-3/mail-calender-contacts-on-exchange-online-rest-API.html?s=oai-chapter-3-section-1">访问 Exchange Online 的邮件、日历、联系人</a></li>
+<li id="oai-chapter-3-section-2" class="oai-chapter-3-section oai-chapter-section-row  "><a href="../oai-chapter-3/file-and-folder-on-spo-and-onedriveforbusiness-API.html?s=oai-chapter-3-section-2">访问 SharePoint Online 和 OneDrive 商业版的目录和文件</a></li>
+<li id="oai-chapter-3-section-3" class="oai-chapter-3-section oai-chapter-section-row  "><a href="../oai-chapter-3/user-and-group-on-azure-ad-API.html?s=oai-chapter-3-section-3">访问 Azure AD 用户和用户组</a></li>
+<li id="oai-chapter-3-section-4" class="oai-chapter-3-section oai-chapter-section-row  "><a href="../oai-chapter-3/outlook-addin-API.html?s=oai-chapter-3-section-4">Office graph</a></li>
+
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+		  <h4 style="color: blue; display:none">您所在的位置：什么是 Office 扩展应用》Hello World 应用</h4>
+		  <h1 class="page-header">Hello World 应用</h1>
+		  <h3 class="sub-header">准备工作</h3>
+<p>
+						开发 Office 扩展应用基本等同于开发常见的 Web 应用程序，扩展应用实际运行内嵌于 Office 平台上的 iframe 中。
+						<br>
+						您可以将 Web 应用的开发体验无缝地迁移到 Office 扩展应用开发中：
+						<ul>
+							<li>通过 JavaScript 和成熟框架（如 jQuery） 实现交互式 UI 和自定义逻辑；</li>
+							<li>利用 HTTP 协议和 AJAX 异步编程技术调用相应数据源的 REST API 或其他 Web 服务；</li>
+							<li>使用服务器端脚本语言（如 ASP 或 PHP）实现，这些语言运行于服务器端；</li>
+							<li>利用 HTML5 、CSS3 优化网页表现和布局。</li>
+						</ul>
+						
+						接下来，我们通过一个简单的例子来介绍如何开发 Office 扩展应用。
+						为了开发此类应用，您可通过两种方式进行：
+						<ul>
+							<li>在已安装 Office 2013 （富客户端）和 Visual Studio 2012 （或更新版本）的 PC 机上进行开发。</li>
+							<li>使用 Office 365 网页版开发工具（<a href="https://www.napacloudapp.com/"target="_blank">Napa</a>）进行开发 - 无需安装任何客户端软件，需要 Microsoft 帐户登录。</li>
+						</ul>
+						这里我们采用第二种方式进行开发，如果您还没有注册 Microsoft 账号，请点击<a href="http://windows.microsoft.com/zh-CN/windows-live/sign-up-create-account-how" target="_blank">此处</a>注册。
+						</p>
+<h3 class="sub-header">创建并调试一个 Office 内容应用 - Hello World</h3>
+<p>
+						<div class="row featurette">
+						<div class="col-md-4">
+						  <h4 class="featurette-heading demostep">1. 打开 Napa</h4>
+						  <p class="lead">通过点击上述链接，并用 Microsoft 账号登录，进入 Napa 开发工具。</p>
+						</div>
+						<div class="col-md-8">
+						  <img class="featurette-image img-responsive center-block" src="../assets/images/how_to_develop_office_addin_hello_world_napastart.png">
+						</div>
+						</div>
+						
+						<hr class="featurette-divider">
+						
+						<div class="row featurette">
+						<div class="col-md-3 col-md-push-9">
+						  <h4 class="featurette-heading demostep">2. 创建一个 Office 内容应用。</h4>
+						  <p class="lead">
+						  点击“添加新的项目”，并输入项目名称，选择“Office 内容应用”， 点击“创建”。
+						  </p>
+						</div>
+						<div class="col-md-9 col-md-pull-3">
+						  <img class="featurette-image img-responsive center-block" src="../assets/images/how_to_develop_office_addin_hello_world_createnewcontentaddin.png"">
+						</div>
+						</div>
+						
+						<hr class="featurette-divider">
+						
+						<div class="row featurette">
+						<div class="col-md-4">
+						  <h4 class="featurette-heading demostep">3. 点击“运行项目”，等待响应</h4>
+						  <p class="lead">
+						  创建完新的内容应用项目后，Napa自动添加了简单的测试程序，您只需点击“运行项目”，等待程序部署。
+						  </p>
+						</div>
+						<div class="col-md-8">
+						  <img class="featurette-image img-responsive center-block" src="../assets/images/how_to_develop_office_addin_hello_world_runhellowworld.png">
+						</div>
+						</div>
+						
+						<hr class="featurette-divider">
+						
+						<div class="row featurette">
+						<div class="col-md-4 col-md-push-8">
+						  <h4 class="featurette-heading demostep">4. 可能遇到网页不能访问或者证书过期。</h4>
+						  <p class="lead">
+						  具体如何解决这类问题，会在这里更新。
+						  </p>
+						</div>
+						<div class="col-md-8 col-md-pull-4">
+						  <img class="featurette-image img-responsive center-block" src="../assets/images/how_to_develop_office_addin_hello_world_projectrunerror.png">
+						</div>
+						</div>
+						<hr class="featurette-divider">
+						<!-- /END THE FEATURETTES -->
+						</p>
+<h3 class="sub-header">相关链接</h3>
+<p>
+						<table class="table table-striped">
+						  <tbody>
+							<tr>
+							  <td><a href="https://msdn.microsoft.com/ZH-CN/library/office/jj220082.aspx" target="_blank">Office 相关应用程序概述</a></td>
+							</tr>
+							<tr>
+							  <td><a href="https://msdn.microsoft.com/zh-cn/library/office/jj220060.aspx" target="_blank">Office 相关应用程序</a></td>
+							</tr>
+							<tr>
+							  <td>
+								<a href="http://blogs.msdn.com/b/jasonz/archive/2012/07/17/introducing-napa-office-365-development-tools.aspx" target="_blank">Introducing “Napa” - Office 365 Development Tools</a>
+							  </td>
+							</tr>
+							<tr>
+							  <td>
+								<a href="http://blogs.msdn.com/b/officeapps/archive/2013/08/27/use-napa-office-365-development-tools-to-build-apps-for-office-and-sharepoint-on-the-browser.aspx" target="_blank">Use “Napa” Office 365 Development Tools to build apps for Office and SharePoint on the browser</a>
+							  </td>
+							</tr>
+							<tr>
+							  <td>
+								<a href="http://www.zdnet.com/article/microsofts-napa-tools-for-building-apps-for-the-new-office-sharepoint/" target="_blank">Microsoft's 'Napa': Tools for building apps for the new Office, SharePoint</a>
+							  </td>
+							</tr>
+						  </tbody>
+						</table>
+						</p>
+
+        </div>
+      </div>
+    </div>
+	
+ 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../assets/js/oai.js"></script>
+  </body>
+</html>

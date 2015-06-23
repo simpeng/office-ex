@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<meta name="keywords" content="Office 2013 App,Office 扩展应用, Office 插件开发, 跨Office 平台应用, 
+									simpeng, simpeng.net, Office Add-In, App for Office" />
+    <meta name="description" content="Office 2013 App,Office 扩展应用, Office 插件开发, 跨Office 平台应用, 
+									simpeng, simpeng.net, Office Add-In, App for Office" />
+    <meta name="author" content="">
+
+    <title>扩展应用简介 - Office 扩展应用文档</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+  </head>
+
+  <body>
+  
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar" type="button" data-toggle="collapse" data-target="#left-nav-sidebar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">开发 Office 平台上的扩展应用</a>
+        </div>
+      </div>
+    </nav>
+
+	<div class="container-fluid">
+      <div class="row">
+        <div id="left-nav-sidebar" class="col-sm-12 col-xs-12 col-md-2 sidebar collapse">
+          <ul class="nav nav-sidebar">
+			<li id="oai-chapter-1" class="active oai-chapter-row"><a>什么是 Office 扩展应用</a></li>
+<li id="oai-chapter-1-section-1" class="oai-chapter-1-section oai-chapter-section-row activedSectionRow "><a href="../oai-chapter-1/office-addin-introduction.html?s=oai-chapter-1-section-1">扩展应用简介</a></li>
+<li id="oai-chapter-1-section-2" class="oai-chapter-1-section oai-chapter-section-row  "><a href="../oai-chapter-1/start-with-hello-world.html?s=oai-chapter-1-section-2">Hello World 应用</a></li>
+<li id="oai-chapter-1-section-3" class="oai-chapter-1-section oai-chapter-section-row  "><a href="../oai-chapter-1/office-addin-types-and-current-platoform-supporting.html?s=oai-chapter-1-section-3">扩展应用类型及平台支持</a></li>
+<li id="oai-chapter-1-section-4" class="oai-chapter-1-section oai-chapter-section-row  "><a href="../oai-chapter-1/compare-office-addin-with-vba-and-vsto.html?s=oai-chapter-1-section-4">与VBA、VSTO的区别</a></li>
+<li id="oai-chapter-1-section-5" class="oai-chapter-1-section oai-chapter-section-row  "><a href="../oai-chapter-1/office-addin-data-sources.html?s=oai-chapter-1-section-5">Office 扩展应用的数据源</a></li>
+<li id="oai-chapter-2" class="active oai-chapter-row"><a>Office 文档操作 API</a></li>
+<li id="oai-chapter-2-section-1" class="oai-chapter-2-section oai-chapter-section-row activedSectionRow "><a href="../oai-chapter-2/word-addin-API.html?s=oai-chapter-2-section-1">Word 文档 API</a></li>
+<li id="oai-chapter-2-section-2" class="oai-chapter-2-section oai-chapter-section-row  "><a href="../oai-chapter-2/excel-addin-API.html?s=oai-chapter-2-section-2">Excel 文档 API</a></li>
+<li id="oai-chapter-2-section-3" class="oai-chapter-2-section oai-chapter-section-row  "><a href="../oai-chapter-2/powerpoint-addin-API.html?s=oai-chapter-2-section-3">PowerPoint 文档 API</a></li>
+<li id="oai-chapter-2-section-4" class="oai-chapter-2-section oai-chapter-section-row  "><a href="../oai-chapter-2/outlook-addin-API.html?s=oai-chapter-2-section-4">邮件文档 API</a></li>
+<li id="oai-chapter-2-section-5" class="oai-chapter-2-section oai-chapter-section-row  "><a href="../oai-chapter-2/access-addin-API.html?s=oai-chapter-2-section-5">Access 文档 API</a></li>
+<li id="oai-chapter-2-section-6" class="oai-chapter-2-section oai-chapter-section-row  "><a href="../oai-chapter-2/project-addin-API.html?s=oai-chapter-2-section-6">Project 文档 API</a></li>
+<li id="oai-chapter-3" class="active oai-chapter-row"><a>Office 365 API</a></li>
+<li id="oai-chapter-3-section-1" class="oai-chapter-3-section oai-chapter-section-row activedSectionRow "><a href="../oai-chapter-3/mail-calender-contacts-on-exchange-online-rest-API.html?s=oai-chapter-3-section-1">访问 Exchange Online 的邮件、日历、联系人</a></li>
+<li id="oai-chapter-3-section-2" class="oai-chapter-3-section oai-chapter-section-row  "><a href="../oai-chapter-3/file-and-folder-on-spo-and-onedriveforbusiness-API.html?s=oai-chapter-3-section-2">访问 SharePoint Online 和 OneDrive 商业版的目录和文件</a></li>
+<li id="oai-chapter-3-section-3" class="oai-chapter-3-section oai-chapter-section-row  "><a href="../oai-chapter-3/user-and-group-on-azure-ad-API.html?s=oai-chapter-3-section-3">访问 Azure AD 用户和用户组</a></li>
+<li id="oai-chapter-3-section-4" class="oai-chapter-3-section oai-chapter-section-row  "><a href="../oai-chapter-3/outlook-addin-API.html?s=oai-chapter-3-section-4">Office graph</a></li>
+
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+		  <h4 style="color: blue; display:none">您所在的位置：什么是 Office 扩展应用》扩展应用简介</h4>
+		  <h1 class="page-header">扩展应用简介</h1>
+		  <h3 class="sub-header">Office 平台</h3>
+<p>
+						传统的微软 Office 办公软件包括PC端的Excel、Outlook、PowerPoint、Project、Word、Access等应用，
+						此外微软还开发了基于Web的Excel、Outlook、PowerPoint、Word应用，用户可以随时随地使用浏览器访问并使用Office。
+						移动平台上的Office产品也日趋完善，不同程度地覆盖了安卓，苹果和 Windows/Windows Phone 系统的移动设备。
+						</p>
+<h3 class="sub-header">Office 平台中的扩展应用</h3>
+<p>
+						Office 2013 以后，微软为包括您在内的 Office 平台上的开发者提供了一种开发扩展应用的新模型，它允许您在 Office 应用程序中创建一个区域，这个区域可以来展现网页与文档的交互以及附加功能内容。
+						您可以将高度定制化的 Web 应用或服务集成在 Office 中，并且使之在整个 Office 平台上可用。
+						应用程序实际上并没有安装在运行 Office 的计算机上；其实现托管在您指定的 Web 服务器上，因此，您可以轻松地从该服务器对它进行维护和更新。
+						</p>
+<p>
+						例如，您可以针对Word开发词典应用，词典应用显示在Word文档中，用户在编辑文档时不再需要再切换到翻译软件或浏览器。
+						除此之外，您可以利用Office平台提供的JavaScript API在词典应用中与当前文档进行交互，如读取或写入数据，将文档以PDF形式下载等等。
+						当词典应用被部署（到您指定的 Web 服务器上）并发布后， 用户可在Word 2013 （富客户端）、Word Online中插入并使用该词典应用。
+						通过 Office 扩展应用平台，您可以创建能够吸引新用户和企业的 Office 客户端应用程序。
+						</p>
+<p>
+						利用 Web 和标准 Web 技术（如 HTML5、XML、CSS3、JavaScript 和 REST API，以及诸如 ASP 、PHP 等服务器端脚本语言）的强大功能，您可以创建与 Office 文档、电子邮件、会议请求、约会甚至任何提供 REST API 的其他数据源进行交互的应用程序。			
+						Office 2013中的Office扩展应用平台支持三种应用（应用也称为AddIn,也就是外接程序）类型：Office 任务面板(任务窗格外接程序)、Office 内容应用（内容外接程序）以及Office 邮件应用（邮件外接程序）。
+						</p>
+<p>
+						<img class="featurette-image img-responsive center-block" src="../assets/images/office_addin_app_types.png">
+						<br>几类扩展应用举例：<br><br>
+						<div class="row placeholders">
+						  <div class="col-xs-6 col-sm-3 col-md-6">
+							<img class="img-responsive" src="../assets/images/office_addin_app_type_taskpane_example.jpg">
+							<h4>Office 任务面板应用</h4>
+							<span class="text-muted"></span>
+						  </div>
+						  <div class="col-xs-6 col-sm-3 col-md-6">
+							<img class="img-responsive" src="../assets/images/office_addin_app_type_incontent_example.jpg">
+							<h4>Office 内容应用</h4>
+							<span class="text-muted"></span>
+						  </div>
+						  <div class="col-xs-6 col-sm-3 col-md-6">
+							<img class="img-responsive" src="../assets/images/office_addin_app_type_outlook_example.jpg">
+							<h4>Office 邮件应用</h4>
+							<span class="text-muted"></span>
+						  </div>
+						</div>
+						<br>
+						下面通过实例介绍最终用户如何插入并使用 Office 扩展应用。
+						</p>
+<h3 class="sub-header">演示：在 Excel 2013 中使用扩展应用</h3>
+<p>
+						<!-- START THE FEATURETTES -->
+						<div class="row featurette">
+						  <div class="col-md-4">
+							<h4 class="featurette-heading demostep">1. 用Excel 2013创建一个新文档</h4>
+							<p class="lead">创建一组表格数据：第一列是姓名，第二列是对应每个人的数字（比如说这些数字表示每个人在银行中的存款。），如右图。</p>
+						  </div>
+						  <div class="col-md-8">
+							<img class="featurette-image img-responsive center-block" src="../assets/images/demo_use_office_app_in_excel.png">
+						  </div>
+						</div>
+
+						<hr class="featurette-divider">
+
+						<div class="row featurette">
+						  <div class="col-md-4 col-md-push-8">
+							<h4 class="featurette-heading demostep">2. 打开Office商店，查找People Graph扩展应用。</h4>
+							<p class="lead">People Graph基于Office扩展应用平台开发，并发布在微软Office商店中，用户可以随时随地的将它安装到自己的Office文档中，利用其对文档中选中的数据做可视化处理。
+							  注意：需要在安装界面中点击Trust It，完成安装。
+							</p>
+						  </div>
+						  <div class="col-md-8 col-md-pull-4">
+							<img class="featurette-image img-responsive center-block" src="../assets/images/demo_use_office_app_in_excel_2.png">
+						  </div>
+						</div>
+
+						<hr class="featurette-divider">
+
+						<div class="row featurette">
+						  <div class="col-md-4">
+							<h4 class="featurette-heading demostep">3. 选择数据并将其可视化</h4>
+							<p class="lead">
+							  点击“选择数据”之后，会出现操作提示。
+							</p>
+						  </div>
+						  <div class="col-md-8">
+							<img class="featurette-image img-responsive center-block" src="../assets/images/demo_use_office_app_in_excel_3.png">
+							<br>
+							<img class="featurette-image img-responsive center-block" src="../assets/images/demo_use_office_app_in_excel_4.png">
+							<br>
+							<img class="featurette-image img-responsive center-block" src="../assets/images/demo_use_office_app_in_excel_5.png">
+						  </div>
+						</div>
+						  
+						<hr class="featurette-divider">
+
+						<div class="row featurette">
+						  <div class="col-md-4 col-md-push-8">
+							<h4 class="featurette-heading demostep">4. 为这组数据的选择合适的图形。</h4>
+							  <p class="lead">
+								这里选择美元图形。用户可以复制生成的图像，用在其他文档中。
+							  </p>
+						  </div>
+						  <div class="col-md-8 col-md-pull-4">
+							<img class="featurette-image img-responsive center-block" src="../assets/images/demo_use_office_app_in_excel_6.png">
+						  </div>
+						</div>
+						<hr class="featurette-divider">
+						<!-- /END THE FEATURETTES -->
+						</p>
+<h3 class="sub-header">相关链接</h3>
+<p>
+						<table class="table table-striped">
+						  <tbody>
+							<tr>
+							  <td><a href="http://www.ithome.com/html/office/21208.htm" target="_blank">真相图：Office2013插件扩展平台Agaves抢先看</a></td>
+							</tr>
+							<tr>
+							  <td><a href="http://indianexpress.com/article/technology/technology-others/build-2015-microsoft-office-to-become-platform-outlook-gets-uber-paypal-inbuilt/#sthash.udZzJm8u.dpuf" target="_blank">Build 2015: What Microsoft announced for Office and Outlook.com</a></td>
+							</tr>
+							<tr>
+							  <td><a href="https://channel9.msdn.com/Events/Build/2015/2-616" target="_blank">Office Development Matters, and Here's Why...</a></td>
+							</tr>
+						  </tbody>
+						</table>
+						</p>
+
+        </div>
+      </div>
+    </div>
+	
+ 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../assets/js/oai.js"></script>
+  </body>
+</html>
