@@ -15,7 +15,7 @@ $(document).ready(function(){
 	$("#" + id).addClass("activedSectionRow");
 	
 	var path = location.pathname.split("/");
-	var chapterId = path[1];
+	var chapterId = path[path.length - 2];
 	$("#" + chapterId).click();
 	
 });
