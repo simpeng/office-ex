@@ -13,6 +13,11 @@ $(document).ready(function(){
 	var id = getQueryStrings()["s"];
 	$(".oai-chapter-section-row").removeClass("activedSectionRow");
 	$("#" + id).addClass("activedSectionRow");
+	
+	var path = location.pathname.split("/");
+	var chapterId = path[1];
+	$("#" + chapterId).click();
+	
 });
   
 function getQueryStrings() { 

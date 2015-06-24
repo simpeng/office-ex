@@ -68,7 +68,7 @@ namespace htmlGenerator
             			isFirstClickableSectionNode = false;
             		}
             		
-            		navStr.AppendLine("<li id=\""+ sectionId +"\" class=\"" + sectionClass + " oai-chapter-section-row " + extraClass + " \"><a href=\"" + url + "\">" + sectionTitle + "</a></li>");
+            		navStr.AppendLine("<li id=\""+ sectionId +"\" class=\"" + sectionClass + " oai-chapter-section-row " + extraClass + " \" style=\"display:none\"><a href=\"" + url + "\">" + sectionTitle + "</a></li>");
             		var subSections = section.Descendants( "SubSection" );
             		
             		sectionIndex++;
