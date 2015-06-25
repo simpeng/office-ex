@@ -66,7 +66,31 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 		  <h4 style="color: blue; display:none">您所在的位置：什么是 Office 扩展应用》与VBA、VSTO的区别</h4>
 		  <h1 class="page-header">与VBA、VSTO的区别</h1>
-		  <h3 class="sub-header">VBA（Visual Basic for Applications）</h3>
+		  <h3 class="sub-header">Office 扩展应用（Office Add-Ins，Office Apps， Apps for Office）与 VBA 、VSTO 的区别</h3>
+<p>
+						继 VBA 和 VSTO 之后， 微软为 Office 平台开发者提供了新的扩展应用模型（App Model)，基于此平台实现的 Office 扩展应用，官方称之为 Office Apps，也称为 Apps for Office 或 Office 2013 Add-Ins。
+						相对于 VBA 和 VSTO 两种开发方式，新的 App Model 有如下几点不同：
+						<ul>
+						  <li><b>［传播与分享］</b>VBA 和 VSTO 的开发者大多是为了提高工作效率，在 Office 中定制部门或公司内部的特定功能，开发出的脚本或者Assembly多在本部门或者公司内传播使用。
+							App Model 允许开发者将应用发布在 Office 商店，使全球的 Office 用户可以使用它，并且<b>允许开发者根据需求定义应用是否收费</b>。
+							这将大大地减少不同公司不同部门之间的重复投资，使<b>“共享同一个应用完成同一类事情”</b>变成可能。
+						  </li>
+						  <li><b>［学习门槛与技术延续性］</b>VBA 和 VSTO 的开发者需要学习较多的入门知识，才能弄清两种开发模型与 Office 程序的交互流程，有较高的学习门槛。比如需要弄清 VBA 有哪些语法，可以做什么程度的事情。
+								App Model 的开发更多地像是 Web 应用程序的开发，开发者可以<b>将 Web 应用的开发体验无缝地迁移到 Office 扩展应用开发</b>中。开发中唯一需要额外了解的是如何利用 App Model 提供的 JSOM API 与文档进行交互。
+						  </li>
+						  <li><b>［扩展程序的更新］</b>基于 VBA 和 VSTO 的 Office 扩展应用程序（或者脚本），一般时通过本地拷贝的方式进行传播，它们运行在本地的 Office 软件并依赖于相应的平台支持（如 VSTO 依赖于 Office 软件提供的主互操作程序集，诸如Microsoft.Office.Interop.Excel.dll）。 
+						然而当 Office 软件或一些平台支持不一致时，会出现同一个脚本或应用在不同的机器上表现不同，甚至是不支持。
+						新的 App Model下开发的 Office App， 由于本质上是运行在 Office 平台（包括2013及以后的富客户端，Web 版， RT版，甚至是 Mac版 详情请点击此处）上嵌入的的 iframe 中，
+						而 App 本身是被开发者 host 在远端的 Web 服务器上。 <b>App 开发者可以根据情况快速的更新 App 的功能或者修正 bug</b>。
+						  </li>
+						  <li><b>［开放的模型提供更多的可能性］</b>新的 App Model 使得 Office 软件变的更加开放，开发者可以将 Office 平台强大的文档功能与开放的互联网技术连接在一起，开发者可以在 App 中做到 VBA 脚本，基于 VSTO 的程序做不到的事情。比如，越来越多的数据源提供给开发者 REST API， 其中 Office 365 REST API 就允许开发者通过一组 URL的方式访问用户的邮件，日历，SharePoint Online 和 OneDrive for Business 上的目录及文件等等，开发者可以在应用中利用灵活的 Web 开发技术简单高效的访问不同的数据源，达到自己的目的。
+						  </li>
+						</ul>
+						</p>
+<p>
+						如果您不了解 VBA 或者 VSTO，可通过下面的介绍简单了解，并体会其与新 App Model 的区别。
+						</p>
+<h3 class="sub-header">VBA（Visual Basic for Applications）</h3>
 <p>
 						<p>Visual Basic for Applications（简称VBA）是一种宏语言，由微软公司开发，可用来实现在微软桌面应用程序环境下的通用自动化(OLE)任务。
 						主要能用来扩展 Windows 的应用程序功能，特别是针对 Microsoft Office 软件。
@@ -163,10 +187,6 @@
 
 						</pre>
 						</p>
-						</p>
-<h3 class="sub-header">Office 扩展应用（Office Add-Ins，Office Apps， Apps for Office）</h3>
-<p>
-
 						</p>
 <h3 class="sub-header">相关链接</h3>
 <p>
