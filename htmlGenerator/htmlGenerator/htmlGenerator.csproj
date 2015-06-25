@@ -140,6 +140,9 @@
     <None Include="assets\images\share_code.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="assets\images\vsto-office-addins-templates.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="assets\js\bootstrap-treeview.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
