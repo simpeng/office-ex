@@ -16,11 +16,10 @@ namespace htmlGenerator
 {	
 	class Program
 	{
-		//Office 2013 App,Office 扩展应用, Office 插件开发, 跨Office 平台应用, simpeng
-		private const string globalKeywords = @"Office 2013 App,Office 扩展应用, Office 插件开发, 跨Office 平台应用, 
-									simpeng, simpeng.net, Office Add-In, App for Office";
-		private const string navarBand = "开发 Office 平台上的扩展应用";
-		private const string pageTitlePostfix = "Office 扩展应用文档";
+		//Office 2013 App,Office 应用, Office 开发, 
+		private const string globalKeywords = @"Office 开发，Office 扩展应用（Office 2013 Apps，Office 2013 AddIns，Apps for Office）开发，simpeng";
+		private const string navarBand = "Office 扩展应用（Office Apps，Office 2013 AddIns，Apps for Office）平台开发 —— 中文文档";
+		private const string hostprefx= "http://simpeng.net/oai/";
 		
 		public static void Main(string[] args)
 		{
@@ -110,9 +109,9 @@ namespace htmlGenerator
             		string sectionTitle = section.Element("Title").Value;
             		string location = chapterTitle + "》" + sectionName;
             		
-            		string pageContent = fileTemplateWithNav.Replace("SIMPENG-NET-OAI-PAGE-TITLE", sectionTitle + " - " + pageTitlePostfix );
+            		string pageContent = fileTemplateWithNav.Replace("SIMPENG-NET-OAI-PAGE-TITLE", sectionTitle + " - " + navarBand );
             		pageContent = pageContent.Replace("SIMPENG-NET-OAI-PAGE-CURRENTLOCATION", chapterTitle + "》" + sectionTitle);
-            		pageContent = pageContent.Replace("SIMPENG-NET-OAI-PAGE-HEADER", sectionTitle);
+            		pageContent = pageContent.Replace("SIMPENG-NET-OAI-PAGE-HEADER", sectionTitle);        		
             		
             		var subSections = section.Descendants( "SubSection");
             		StringBuilder documentContent = new StringBuilder();
@@ -127,7 +126,7 @@ namespace htmlGenerator
             			}
             		}
             		pageContent = pageContent.Replace("SIMPENG-NET-OAI-PAGE-DOCUMENTCONTENT", documentContent.ToString());
-            		
+            		pageContent = pageContent.Replace("SIMPENG-NET-OAI-PAGE-URL", hostprefx + chapterId + "/" + sectionName + ".html");
             		File.WriteAllText( GetHtmlPageRelativePath(chapterId, sectionName), pageContent);
 				}
             	chapterIndex++;

@@ -2,13 +2,13 @@
 <Documentation>
 	<Chapter>
 		<Id>1</Id>
-		<Title>什么是 Office 扩展应用</Title>
+		<Title>什么是 Office Apps</Title>
 		<Name>what-is-office-addin</Name>
 		<Url></Url>
 		<Sections>
 			<Section>
 				<Id>1</Id>
-				<Title>扩展应用简介</Title>
+				<Title>Office Apps 简介</Title>
 				<Name>office-addin-introduction</Name>
 				<Url></Url>
 				<Content>
@@ -22,9 +22,9 @@
 						</Paragraph>
 					</SubSection>
 					<SubSection>
-						<Title>Office 平台中的扩展应用</Title>
+						<Title>Office 平台中的App</Title>
 						<Paragraph><![CDATA[
-						Office 2013 以后，微软为包括您在内的 Office 平台上的开发者提供了一种开发扩展应用的新模型，它允许您在 Office 应用程序中创建一个区域，这个区域可以来展现网页与文档的交互以及附加功能内容。
+						Office 2013 以后，微软为包括您在内的 Office 平台上的开发者提供了一种开发App的新模型，它允许您在 Office 应用程序中创建一个区域，这个区域可以来展现网页与文档的交互以及附加功能内容。
 						您可以将高度定制化的 Web 应用或服务集成在 Office 中，并且使之在整个 Office 平台上可用。
 						应用程序实际上并没有安装在运行 Office 的计算机上；其实现托管在您指定的 Web 服务器上，因此，您可以轻松地从该服务器对它进行维护和更新。
 						]]>
@@ -33,17 +33,17 @@
 						例如，您可以针对Word开发词典应用，词典应用显示在Word文档中，用户在编辑文档时不再需要再切换到翻译软件或浏览器。
 						除此之外，您可以利用Office平台提供的JavaScript API在词典应用中与当前文档进行交互，如读取或写入数据，将文档以PDF形式下载等等。
 						当词典应用被部署（到您指定的 Web 服务器上）并发布后， 用户可在Word 2013 （富客户端）、Word Online中插入并使用该词典应用。
-						通过 Office 扩展应用平台，您可以创建能够吸引新用户和企业的 Office 客户端应用程序。
+						通过 Office Apps平台，您可以创建能够吸引新用户和企业的 Office 客户端应用程序。
 						]]>
 						</Paragraph>
 						<Paragraph><![CDATA[
 						利用 Web 和标准 Web 技术（如 HTML5、XML、CSS3、JavaScript 和 REST API，以及诸如 ASP 、PHP 等服务器端脚本语言）的强大功能，您可以创建与 Office 文档、电子邮件、会议请求、约会甚至任何提供 REST API 的其他数据源进行交互的应用程序。			
-						Office 2013中的Office扩展应用平台支持三种应用（应用也称为AddIn,也就是外接程序）类型：Office 任务面板(任务窗格外接程序)、Office 内容应用（内容外接程序）以及Office 邮件应用（邮件外接程序）。
+						Office 2013中的OfficeApp平台支持三种应用（应用也称为AddIn,也就是外接程序）类型：Office 任务面板(任务窗格外接程序)、Office 内容应用（内容外接程序）以及Office 邮件应用（邮件外接程序）。
 						]]>
 						</Paragraph>
 						<Paragraph><![CDATA[
 						<img class="featurette-image img-responsive center-block" src="../assets/images/office_addin_app_types.png">
-						<br>几类扩展应用举例：<br><br>
+						<br>几类App举例：<br><br>
 						<div class="row placeholders">
 						  <div class="col-xs-6 col-sm-3 col-md-6">
 							<img class="img-responsive" src="../assets/images/office_addin_app_type_taskpane_example.jpg">
@@ -62,12 +62,12 @@
 						  </div>
 						</div>
 						<br>
-						下面通过实例介绍最终用户如何插入并使用 Office 扩展应用。
+						下面通过实例介绍最终用户如何插入并使用 Office Apps。
 						]]>
 						</Paragraph>
 					</SubSection>
 					<SubSection>
-						<Title>演示：在 Excel 2013 中使用扩展应用</Title>
+						<Title>演示：在 Excel 2013 中使用App</Title>
 						<Paragraph><![CDATA[
 						<!-- START THE FEATURETTES -->
 						<div class="row featurette">
@@ -84,8 +84,8 @@
 
 						<div class="row featurette">
 						  <div class="col-md-4 col-md-push-8">
-							<h4 class="featurette-heading demostep">2. 打开Office商店，查找People Graph扩展应用。</h4>
-							<p class="lead">People Graph基于Office扩展应用平台开发，并发布在微软Office商店中，用户可以随时随地的将它安装到自己的Office文档中，利用其对文档中选中的数据做可视化处理。
+							<h4 class="featurette-heading demostep">2. 打开Office商店，查找People GraphApp。</h4>
+							<p class="lead">People Graph基于OfficeApp平台开发，并发布在微软Office商店中，用户可以随时随地的将它安装到自己的Office文档中，利用其对文档中选中的数据做可视化处理。
 							  注意：需要在安装界面中点击Trust It，完成安装。
 							</p>
 						  </div>
@@ -154,16 +154,16 @@
 		
 			<Section>
 				<Id>2</Id>
-				<Title>Hello World 应用</Title>
+				<Title>创建第一个 Office App —— "Hello World" 应用</Title>
 				<Name>start-with-hello-world</Name>
 				<Url></Url>
 				<Content>
 					<SubSection>
 						<Title>准备工作</Title>
 						<Paragraph><![CDATA[
-						开发 Office 扩展应用基本等同于开发常见的 Web 应用程序，扩展应用实际运行内嵌于 Office 平台上的 iframe 中。
+						开发 Office Apps基本等同于开发常见的 Web 应用程序，App实际运行内嵌于 Office 平台上的 iframe 中。
 						<br>
-						您可以将 Web 应用的开发体验无缝地迁移到 Office 扩展应用开发中：
+						您可以将 Web 应用的开发体验无缝地迁移到 Office Apps开发中：
 						<ul>
 							<li>通过 JavaScript 和成熟框架（如 jQuery） 实现交互式 UI 和自定义逻辑；</li>
 							<li>利用 HTTP 协议和 AJAX 异步编程技术调用相应数据源的 REST API 或其他 Web 服务；</li>
@@ -171,7 +171,7 @@
 							<li>利用 HTML5 、CSS3 优化网页表现和布局。</li>
 						</ul>
 						
-						接下来，我们通过一个简单的例子来介绍如何开发 Office 扩展应用。
+						接下来，我们通过一个简单的例子来介绍如何开发 Office Apps。
 						为了开发此类应用，您可通过两种方式进行：
 						<ul>
 							<li>在已安装 Office 2013 （富客户端）和 Visual Studio 2012 （或更新版本）的 PC 机上进行开发。</li>
@@ -276,14 +276,14 @@
 		
 			<Section>
 				<Id>3</Id>
-				<Title>扩展应用类型及平台支持</Title>
+				<Title>Office Apps 类型及平台支持</Title>
 				<Name>office-addin-types-and-current-platoform-supporting</Name>
 				<Url></Url>
 				<Content>
 					<SubSection>
-						<Title>Office 扩展应用类型</Title>
+						<Title>Office Apps 类型</Title>
 						<Paragraph><![CDATA[
-						Office 扩展应用平台支持三种应用（应用也称为AddIn,也就是外接程序）类型：Office 任务面板(任务窗格外接程序)、Office 内容应用（内容外接程序）以及Office 邮件应用（邮件外接程序）。
+						Office Apps平台支持三种应用（应用也称为AddIn,也就是外接程序）类型：Office 任务面板(任务窗格外接程序)、Office 内容应用（内容外接程序）以及Office 邮件应用（邮件外接程序）。
 						<!-- START THE FEATURETTES -->
 						  <div class="row featurette">
 							<div class="col-md-8">
@@ -329,7 +329,7 @@
 								<br>
 								邮件应用适用的用户场景:
 								<ul>
-									<li>最终用户需要在查看或撰写电子邮件和约会时，使用 Office 扩展应用</li>
+									<li>最终用户需要在查看或撰写电子邮件和约会时，使用 Office Apps</li>
 									<li>需要根据邮件上下文决定是否应该显示邮件应用入口。
 									例如，当发现邮件正文中有地址信息时，才显示地图邮件应用入口，用户点击入口后，邮件应用启动，并将匹配到的地址信息显示在地图上。</li>
 									<li>应用程序不仅在台式机上可用，而且在平板电脑或智能手机上也可用</li>
@@ -351,9 +351,9 @@
 						</Paragraph>
 					</SubSection>
 					<SubSection>
-						<Title>目前三种扩展应用类型在 Office 平台上的支持</Title>
+						<Title>目前三种 Apps类型在 Office 平台上的支持</Title>
 						<Paragraph><![CDATA[
-						下表总结了不同 Office 软件对三种扩展应用类型的支持情况，当然，将来会有越来越多的 Office 软件能够支持扩展应用。
+						下表总结了不同 Office 软件对三种App类型的支持情况，当然，将来会有越来越多的 Office 软件能够支持App。
 						</br>
 						<table class="table table-striped">
 						<thead>
@@ -505,14 +505,14 @@
 			</Section>
 		
 			<Section>
-				<Title>与VBA、VSTO的区别</Title>
+				<Title>Office Apps与VBA、VSTO的区别</Title>
 				<Name>compare-office-addin-with-vba-and-vsto</Name>
 				<Url></Url>
 				<Content>
 					<SubSection>
-						<Title>Office 扩展应用（Office Add-Ins，Office Apps， Apps for Office）与 VBA 、VSTO 的区别</Title>
+						<Title>Office Apps（Office Add-Ins，Office Appss， Apps for Office）与 VBA 、VSTO 的区别</Title>
 						<Paragraph><![CDATA[
-						继 VBA 和 VSTO 之后， 微软为 Office 平台开发者提供了新的扩展应用模型（App Model)，基于此平台实现的 Office 扩展应用，官方称之为 Office Apps，也称为 Apps for Office 或 Office 2013 Add-Ins。
+						继 VBA 和 VSTO 之后， 微软为 Office 平台开发者提供了新的App模型（App Model)，基于此平台实现的 Office Apps，官方称之为 Office Appss，也称为 Apps for Office 或 Office 2013 Add-Ins。
 						相对于 VBA 和 VSTO 两种开发方式，新的 App Model 有如下几点不同：
 						<ul>
 						  <li><b>［传播与分享］</b>VBA 和 VSTO 的开发者大多是为了提高工作效率，在 Office 中定制部门或公司内部的特定功能，开发出的脚本或者Assembly多在本部门或者公司内传播使用。
@@ -520,11 +520,11 @@
 							这将大大地减少不同公司不同部门之间的重复投资，使<b>“共享同一个应用完成同一类事情”</b>变成可能。
 						  </li>
 						  <li><b>［学习门槛与技术延续性］</b>VBA 和 VSTO 的开发者需要学习较多的入门知识，才能弄清两种开发模型与 Office 程序的交互流程，有较高的学习门槛。比如需要弄清 VBA 有哪些语法，可以做什么程度的事情。
-								App Model 的开发更多地像是 Web 应用程序的开发，开发者可以<b>将 Web 应用的开发体验无缝地迁移到 Office 扩展应用开发</b>中。开发中唯一需要额外了解的是如何利用 App Model 提供的 JSOM API 与文档进行交互。
+								App Model 的开发更多地像是 Web 应用程序的开发，开发者可以<b>将 Web 应用的开发体验无缝地迁移到 Office Apps开发</b>中。开发中唯一需要额外了解的是如何利用 App Model 提供的 JSOM API 与文档进行交互。
 						  </li>
-						  <li><b>［扩展程序的更新］</b>基于 VBA 和 VSTO 的 Office 扩展应用程序（或者脚本），一般时通过本地拷贝的方式进行传播，它们运行在本地的 Office 软件并依赖于相应的平台支持（如 VSTO 依赖于 Office 软件提供的主互操作程序集，诸如Microsoft.Office.Interop.Excel.dll）。 
+						  <li><b>［Office Appss 的更新］</b>基于 VBA 和 VSTO 的 Office Apps程序（或者脚本），一般时通过本地拷贝的方式进行传播，它们运行在本地的 Office 软件并依赖于相应的平台支持（如 VSTO 依赖于 Office 软件提供的主互操作程序集，诸如Microsoft.Office.Interop.Excel.dll）。 
 						然而当 Office 软件或一些平台支持不一致时，会出现同一个脚本或应用在不同的机器上表现不同，甚至是不支持。
-						新的 App Model下开发的 Office App， 由于本质上是运行在 Office 平台（包括2013及以后的富客户端，Web 版， RT版，甚至是 Mac版 详情请点击此处）上嵌入的的 iframe 中，
+						新的 App Model下开发的 Office Apps， 由于本质上是运行在 Office 平台（包括2013及以后的富客户端，Web 版， RT版，甚至是 Mac版 详情请点击此处）上嵌入的的 iframe 中，
 						而 App 本身是被开发者 host 在远端的 Web 服务器上。 <b>App 开发者可以根据情况快速的更新 App 的功能或者修正 bug</b>。
 						  </li>
 						  <li><b>［开放的模型提供更多的可能性］</b>新的 App Model 使得 Office 软件变的更加开放，开发者可以将 Office 平台强大的文档功能与开放的互联网技术连接在一起，开发者可以在 App 中做到 VBA 脚本，基于 VSTO 的程序做不到的事情。比如，越来越多的数据源提供给开发者 REST API， 其中 Office 365 REST API 就允许开发者通过一组 URL的方式访问用户的邮件，日历，SharePoint Online 和 OneDrive for Business 上的目录及文件等等，开发者可以在应用中利用灵活的 Web 开发技术简单高效的访问不同的数据源，达到自己的目的。
@@ -589,7 +589,7 @@
 						<p>
 						使用 VSTO 生成外接程序时，您会创建一个由 Microsoft Office 应用程序加载的托管代码程序集（managed code assembly）。 
 						加载了程序集之后，外接程序可以响应在 Office 应用程序中引发的事件（例如，用户单击菜单项时引发的事件）。 
-						外接程序也可以调入对象模型以便实现扩展应用程序的目的，并且它可以使用 .NET Framework 中的任何类。
+						外接程序也可以调入对象模型以便实现App程序的目的，并且它可以使用 .NET Framework 中的任何类。
 						托管代码程序集通过 Office 应用程序的主互操作程序集（PIA）与 Office 应用程序进行交互（基于 COM 的对象模型）。
 						</p>
 						<p>
@@ -670,7 +670,7 @@
 			</Section>
 		
 			<Section>
-				<Title>Office 扩展应用的数据源</Title>
+				<Title>Office Apps的数据源</Title>
 				<Name>office-addin-data-sources</Name>
 				<Url></Url>
 				<Content>
