@@ -1,4 +1,4 @@
-# Office 365 平台开发 － 中文文档计划
+# Office Apps (又称为Apps for Office，Apps for Office，Office 2013 Add-Ins) 开发 － 中文文档计划
 ##项目背景
 继 [VBA](http://simpeng.net/oai/oai-chapter-1/compare-office-addin-with-vba-and-vsto.html?s=oai-chapter-1-section-4  了解VBA) 和 [VSTO](http://simpeng.net/oai/oai-chapter-1/compare-office-addin-with-vba-and-vsto.html?s=oai-chapter-1-section-4 了解VSTO) 之后， 微软为 Office 平台开发者提供了新的扩展应用模型（App Model)，基于此平台实现的 Office 扩展应用，官方称之为 Office Apps，也称为 Apps for Office 或 Office 2013 Add-Ins。相对于 VBA 和 VSTO 两种开发方式，新的 App Model 有如下几点不同：
 * ［传播与分享］VBA 和 VSTO 的开发者大多是为了提高工作效率，在 Office 中定制部门或公司内部的特定功能，开发出的脚本或者Assembly多在本部门或者公司内传播使用。App Model 允许开发者将应用发布在 Office 商店，使全球的 Office 用户可以使用它，并且允许开发者根据需求定义应用是否收费。这将大大地减少不同公司不同部门之间的重复投资，使“共享同一个应用完成同一类事情”变成可能。
