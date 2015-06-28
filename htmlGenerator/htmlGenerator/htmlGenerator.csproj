@@ -172,11 +172,20 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="assets" />
-    <Folder Include="assets\css" />
-    <Folder Include="assets\images" />
-    <Folder Include="assets\js" />
+    <Content Include="assets\images\how_to_develop_office_addin_hello_world_projectfiles_intro.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\how_to_develop_office_addin_hello_world_projectfiles_intro2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\how_to_develop_office_addin_hello_world_runninghelloworld.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\images\how_to_develop_office_addin_hello_world_runninghelloworld_success.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -172,7 +172,7 @@
 						</ul>
 						
 						接下来，我们通过一个简单的例子来介绍如何开发 Office Apps。
-						您可通过如下两种开发环境开发 Office App：
+						您可通过两种开发环境开发 Office App：
 						<ul>
 							<li>在已安装 Office 2013 （富客户端）和 Visual Studio 2012 （或更新版本）的 PC 机上进行开发。</li>
 							<li>使用 Office 365 网页版开发工具（<a href="https://www.napacloudapp.com/"target="_blank">Napa</a>）进行开发 - 无需安装任何客户端软件，需要 Microsoft 帐户登录。</li>

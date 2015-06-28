@@ -77,7 +77,7 @@
 						</ul>
 						
 						接下来，我们通过一个简单的例子来介绍如何开发 Office Apps。
-						为了开发此类应用，您可通过两种方式进行：
+						您可通过两种开发环境开发 Office App：
 						<ul>
 							<li>在已安装 Office 2013 （富客户端）和 Visual Studio 2012 （或更新版本）的 PC 机上进行开发。</li>
 							<li>使用 Office 365 网页版开发工具（<a href="https://www.napacloudapp.com/"target="_blank">Napa</a>）进行开发 - 无需安装任何客户端软件，需要 Microsoft 帐户登录。</li>
@@ -128,15 +128,50 @@
 						
 						<div class="row featurette">
 						<div class="col-md-4 col-md-push-8">
-						  <h4 class="featurette-heading demostep">4. 可能遇到网页不能访问或者证书过期。</h4>
+						  <h4 class="featurette-heading demostep">4. 允许浏览器弹出新的窗口显示 Web 版的Excel 页面，如图所示，App 类似于图表一样“浮在”上面。</h4>
 						  <p class="lead">
-						  具体如何解决这类问题，会在这里更新。
+						  由于这个由您创建的 App 是首次插入在这个 Excel 文档中，在 App 启动之前会告知用户： 这是新的 Office App，如果您选择启动，它将对此文档的内容具有访问权限...。
+              另外还会告诉用户这个 App 的发布者是谁。用户需要点击“开始”才能使用此 App。
 						  </p>
 						</div>
 						<div class="col-md-8 col-md-pull-4">
-						  <img class="featurette-image img-responsive center-block" src="../assets/images/how_to_develop_office_addin_hello_world_projectrunerror.png">
+						  <img class="featurette-image img-responsive center-block" src="../assets/images/how_to_develop_office_addin_hello_world_runninghelloworld.png">
 						</div>
 						</div>
+						<hr class="featurette-divider">
+
+						<div class="row featurette">
+						<div class="col-md-4 col-md-push-8">
+						  <h4 class="featurette-heading demostep">5. 点击“开始”后，App 启动如图所示。</h4>
+						  <p class="lead">
+						  <b>理论上</b>您可以选择 Excel 中的部分文字，然后点击 “Get data from selection”，此时， App会将您选取的部分中的数据显示在 App 内，而 App 中用来取得 Excel 选中部分文字的 API 就是 Office 平台提供的 JSOM （Office.js) 提供。
+              您可以在本文档系列的第二章《Office 文档操作 API》中详细了解 Office 平台对不同的 Office 软件（Word， Excel，PowerPoint，...)提供的 API 支持。
+              然而，由于处于调试阶段，打开的 Excel 文档也处于只读的状态，所以您也无法添加新的数据进行测试（尴尬 o(>﹏<)o）。
+						  </p>
+						</div>
+						<div class="col-md-8 col-md-pull-4">
+						  <img class="featurette-image img-responsive center-block" src="../assets/images/how_to_develop_office_addin_hello_world_runninghelloworld_success.png">
+						</div>
+						</div>
+						<hr class="featurette-divider">
+
+						<div class="row featurette">
+						<div class="col-md-4">
+						  <h4 class="featurette-heading demostep">6. 接下来我们来看看这个内容应用项目包含的文件。</h4>
+						  <p class="lead">
+						  其中 Home.html是这个 App 启动的首页面（当然， 我们可以根据需要在 App 的 Manifest 中设定首页面，将在后面介绍）。
+              另外也像其他 Web 应用程序一样，您可以任意添加 js，css，html，图片等等网页元素（不局限于静态的 Web 编程技术，也可以使用 php 等运行于服务端的语言）。
+						  </p>
+              <p class="lead">
+              另外，您可以看到 Home.html 中引用了 https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js ，这正是 Office 平台提供的用于和文档交互的 JSOM API。
+              </p>
+						</div>
+						<div class="col-md-8">
+						  <img class="featurette-image img-responsive center-block" src="../assets/images/how_to_develop_office_addin_hello_world_projectfiles_intro.png">
+						  <img class="featurette-image img-responsive center-block" src="../assets/images/how_to_develop_office_addin_hello_world_projectfiles_intro2.png">
+						</div>
+						</div>
+						
 						<hr class="featurette-divider">
 						<!-- /END THE FEATURETTES -->
 						</p>

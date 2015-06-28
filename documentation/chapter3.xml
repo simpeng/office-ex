@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Documentation>
+	<Chapter>
+		<Title>Office 365 API</Title>
+		<Name>office-365-API</Name>
+		<Url></Url>
+		<Sections>
+			<Section>
+				<Title>访问 Exchange Online 的邮件、日历、联系人</Title>
+				<Name>mail-calender-contacts-on-exchange-online-rest-API</Name>
+				<Url></Url>
+				<Content>
+					<SubSection>
+						<Title>待定</Title>
+						<Paragraph><![CDATA[
+
+						]]>
+						</Paragraph>
+					</SubSection>
+					<SubSection>
+						<Title>相关链接</Title>
+						<Paragraph><![CDATA[
+						<table class="table table-striped">
+						  <tbody>
+							<tr>
+							  <td><a href="#" target="_blank">links</a></td>
+							</tr>
+						  </tbody>
+						</table>
+						]]>
+						</Paragraph>
+					</SubSection>
+				</Content>
+			</Section>
+
+			<Section>
+				<Title>访问 SharePoint Online 和 OneDrive 商业版的目录和文件</Title>
+				<Name>file-and-folder-on-spo-and-onedriveforbusiness-API</Name>
+				<Url></Url>
+				<Content>
+					<SubSection>
+						<Title>待定</Title>
+						<Paragraph><![CDATA[
+
+						]]>
+						</Paragraph>
+					</SubSection>
+					<SubSection>
+						<Title>相关链接</Title>
+						<Paragraph><![CDATA[
+						<table class="table table-striped">
+						  <tbody>
+							<tr>
+							  <td><a href="#" target="_blank">links</a></td>
+							</tr>
+						  </tbody>
+						</table>
+						]]>
+						</Paragraph>
+					</SubSection>
+				</Content>
+			</Section>
+
+			<Section>
+				<Title>访问 Azure AD 用户和用户组</Title>
+				<Name>user-and-group-on-azure-ad-API</Name>
+				<Url></Url>
+				<Content>
+					<SubSection>
+						<Title>待定</Title>
+						<Paragraph><![CDATA[
+
+						]]>
+						</Paragraph>
+					</SubSection>
+					<SubSection>
+						<Title>相关链接</Title>
+						<Paragraph><![CDATA[
+						<table class="table table-striped">
+						  <tbody>
+							<tr>
+							  <td><a href="#" target="_blank">links</a></td>
+							</tr>
+						  </tbody>
+						</table>
+						]]>
+						</Paragraph>
+					</SubSection>
+				</Content>
+			</Section>
+
+			<Section>
+				<Title>Office graph</Title>
+				<Name>outlook-addin-API</Name>
+				<Url></Url>
+				<Content>
+					<SubSection>
+						<Title>待定</Title>
+						<Paragraph><![CDATA[
+
+						]]>
+						</Paragraph>
+					</SubSection>
+					<SubSection>
+						<Title>相关链接</Title>
+						<Paragraph><![CDATA[
+						<table class="table table-striped">
+						  <tbody>
+							<tr>
+							  <td><a href="#" target="_blank">links</a></td>
+							</tr>
+						  </tbody>
+						</table>
+						]]>
+						</Paragraph>
+					</SubSection>
+				</Content>
+			</Section>
+
+		</Sections>
+	</Chapter>
+</Documentation>
