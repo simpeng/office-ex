@@ -74,6 +74,9 @@
     <None Include="assets\images\arrow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="assets\images\compare_with_vba_and_vsto_examples_built-upon_vsto.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="assets\images\demo_use_office_app_in_excel.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

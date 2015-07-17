@@ -172,7 +172,7 @@
 						</ul>
 						
 						接下来，我们通过一个简单的例子来介绍如何开发 Office Apps。
-						您可通过两种开发环境开发 Office App：
+						您可通过如下两种开发环境开发 Office App：
 						<ul>
 							<li>在已安装 Office 2013 （富客户端）和 Visual Studio 2012 （或更新版本）的 PC 机上进行开发。</li>
 							<li>使用 Office 365 网页版开发工具（<a href="https://www.napacloudapp.com/"target="_blank">Napa</a>）进行开发 - 无需安装任何客户端软件，需要 Microsoft 帐户登录。</li>
@@ -541,31 +541,18 @@
 			</Section>
 		
 			<Section>
-				<Title>Office Apps与VBA、VSTO的区别</Title>
+				<Title>比较 Office Add-In Model, VBA 和 VSTO </Title>
 				<Name>compare-office-addin-with-vba-and-vsto</Name>
 				<Url></Url>
 				<Content>
 					<SubSection>
-						<Title>Office Apps（Office Add-Ins，Office Appss， Apps for Office）与 VBA 、VSTO 的区别</Title>
+						<Title>三种扩展 Office 软件功能的开发模型对比 – Office Add-In Model, VBA 和 VSTO </Title>
 						<Paragraph><![CDATA[
-						继 VBA 和 VSTO 之后， 微软为 Office 平台开发者提供了新的App模型（App Model)，基于此平台实现的 Office Apps，官方称之为 Office Appss，也称为 Apps for Office 或 Office 2013 Add-Ins。
-						相对于 VBA 和 VSTO 两种开发方式，新的 App Model 有如下几点不同：
-						<ul>
-						  <li><b>［传播与分享］</b>VBA 和 VSTO 的开发者大多是为了提高工作效率，在 Office 中定制部门或公司内部的特定功能，开发出的脚本或者Assembly多在本部门或者公司内传播使用。
-							App Model 允许开发者将应用发布在 Office 商店，使全球的 Office 用户可以使用它，并且<b>允许开发者根据需求定义应用是否收费</b>。
-							这将大大地减少不同公司不同部门之间的重复投资，使<b>“共享同一个应用完成同一类事情”</b>变成可能。
-						  </li>
-						  <li><b>［学习门槛与技术延续性］</b>VBA 和 VSTO 的开发者需要学习较多的入门知识，才能弄清两种开发模型与 Office 程序的交互流程，有较高的学习门槛。比如需要弄清 VBA 有哪些语法，可以做什么程度的事情。
-								App Model 的开发更多地像是 Web 应用程序的开发，开发者可以<b>将 Web 应用的开发体验无缝地迁移到 Office Apps开发</b>中。开发中唯一需要额外了解的是如何利用 App Model 提供的 JSOM API 与文档进行交互。
-						  </li>
-						  <li><b>［Office Appss 的更新］</b>基于 VBA 和 VSTO 的 Office Apps程序（或者脚本），一般时通过本地拷贝的方式进行传播，它们运行在本地的 Office 软件并依赖于相应的平台支持（如 VSTO 依赖于 Office 软件提供的主互操作程序集，诸如Microsoft.Office.Interop.Excel.dll）。 
-						然而当 Office 软件或一些平台支持不一致时，会出现同一个脚本或应用在不同的机器上表现不同，甚至是不支持。
-						新的 App Model下开发的 Office Apps， 由于本质上是运行在 Office 平台（包括2013及以后的富客户端，Web 版， RT版，甚至是 Mac版 详情请点击此处）上嵌入的的 iframe 中，
-						而 App 本身是被开发者 host 在远端的 Web 服务器上。 <b>App 开发者可以根据情况快速的更新 App 的功能或者修正 bug</b>。
-						  </li>
-						  <li><b>［开放的模型提供更多的可能性］</b>新的 App Model 使得 Office 软件变的更加开放，开发者可以将 Office 平台强大的文档功能与开放的互联网技术连接在一起，开发者可以在 App 中做到 VBA 脚本，基于 VSTO 的程序做不到的事情。比如，越来越多的数据源提供给开发者 REST API， 其中 Office 365 REST API 就允许开发者通过一组 URL的方式访问用户的邮件，日历，SharePoint Online 和 OneDrive for Business 上的目录及文件等等，开发者可以在应用中利用灵活的 Web 开发技术简单高效的访问不同的数据源，达到自己的目的。
-						  </li>
-						</ul>
+当 Office 用户需要针对文档自定义新功能时，可以求助于 VBA 或者 VSTO 两种方式。
+Office 2013 富客户端以后，微软为 Office 平台上的开发者提供了一种新模型 --- Office Add-In Model，它允许在 Office 应用程序中创建一片区域，并在这片区域中展现网页与文档的交互。开发者可以将高度定制化的 Web 应用或服务集成在 Office 中，使之在整个 Office 平台上可用。 应用程序实际上并没有安装在运行 Office 的计算机上，而是托管在开发者所指定的 Web 服务器上，因此，可以轻松地从该服务器对它进行维护和更新。
+现在到处都是社交网络、移动设备、各种各样的云服务以及实时的文档协作，新的模型正致力于将 Office 与 Web 技术和资源衔接起来。
+				
+对于开发者而言，无论是 VBA、VSTO，还是新的 Office Add-In Model，只要可以解决实际问题，可以选择任何一种方式实现。而如果要开发新的扩展功能，可以优先考虑 Office Add-In Model 实现，因为这种方式有其独有的优势。下面，我们逐一介绍三种开发模型的优劣，让大家清楚什么时候适宜选择什么样的方案。
 						]]>
 						</Paragraph>
 						<Paragraph><![CDATA[
@@ -574,109 +561,232 @@
 						</Paragraph>
 					</SubSection>
 					<SubSection>
-						<Title>VBA（Visual Basic for Applications）</Title>
+						<Title>Office Add-In Model</Title>
 						<Paragraph><![CDATA[
-						<p>Visual Basic for Applications（简称VBA）是一种宏语言，由微软公司开发，可用来实现在微软桌面应用程序环境下的通用自动化(OLE)任务。
-						主要能用来扩展 Windows 的应用程序功能，特别是针对 Microsoft Office 软件。
-						微软在 1994 年发行的 Excel 5.0 版本中，即具备了 VBA 的宏功能。
-						VBA 使可编程应用软件得到完美的实现，它作为一种通用的宏语言可被所有的微软可编程应用软件所共享。
-						在Office 2000 中，宏语言 VBA 适用于所有应用程序，包括 Word 、 Excel、PowerPoint、Access、Outlook 以及Project。
-						</p>
-						<p>
-						VBA 是基于 Visual Basic for Windows 发展而来的，它与传统的宏语言不同，传统的宏语言不具有高级语言的特征，没有面向对象的程序设计概念和方法。
-						而VBA 提供了面向对象的程序设计方法，提供了相当完整的程序设计语言。
-						VBA 易于学习掌握，可以使用宏记录器记录用户的各种操作并将其转换为VBA 程序代码。
-						这样用户可以容易地将日常工作转换为VBA 程序代码，使工作自动化。
-						因此，对于在工作中需要经常使用Office 套装软件的用户，学用VBA 有助于使工作自动化，提高工作效率。
-						另外，由于VBA 可以直接应用Office 套装软件的各项强大功能，所以对于程序设计人员的程序设计和开发更加方便快捷。
-						</p>
-						<p>由于微软 Office 软件的普及，用户可在 Word、Excel、Access、Powerpoint 中利用 VBA 编写自定义的代码来扩展 Office 软件的功能，从而提升效率。
-						例如：通过一段VBA代码，可以实现画面的切换或者实现复杂逻辑的统计等。
-						Office 取得巨大成功的一个重要原因就是 VBA，使用VBA可以完成很多事情，基于Excel、Word的VBA小程序不计其数。
-						VBA 的语言入门门槛较低，而这些用户利用 VBA 解决的正式工作中关键问题。因此，VBA 程序大多作为部门内部或个人使用的小工具。
-						</p>
+<p>
+【部署方式多样化】使用这种方式开发的扩展功能，称之为 Office Add-In， 微软为这类 Add-In  提供了统一的发布商店 --- Microsoft Office Store。这可以最大化的减少不同公司、不同部门针对相似业务的重复投资，使所有的 Office 用户在不同的 Office 平台（ 主要有富客户端、web版 Office、RT 版 Office等）使用优质的Office 自定义扩展功能。另外， Office Store 还允许开发者对自己发布的Office Add-In收费，这无疑为优质的Add-In开发者带来了商机。另外，微软还允许开发者将开发的 Add-In 部署在本地共享文件夹中或者SharePoint App Catalog上，这样只有局域网或者本公司的人才可以在 Office 软件中使用该Add-In。在发布和传播上， 显然新的Add-In Model走在了VBA、VSTO的前面。
+
+【学习成本更低】开发Office Add-In，更多是利用现今流行的Web开发技术，对于开发者（尤其是已经熟知Web 技术的从业人员）而言，学习和开发Office Add-In的成本也大大降低。开发者甚至可以利用已经存在的web 服务或者网站快速构建出一个Office Add-In。
+
+【维护和更新更加容易】基于 VBA 和 VSTO 的 扩展功能，它们运行在本地的 Office 软件并依赖于相应的平台支持（如 VSTO 依赖于 Office 软件提供的主互操作程序集，诸如Microsoft.Office.Interop.Excel.dll）。 然而当 Office 软件或一些平台支持不一致时，会出现同一个脚本或应用在不同的机器上表现不同，甚至是不支持。 新的 Add-In Model下开发的Add-In， 由于本质上是运行在 Office 平台（包括2013及以后的富客户端，Web 版， RT版，甚至是 Mac版）上嵌入的的 iframe 中， 而 Add-In 本身是被开发者 host 在远端的 Web 服务器上。 Add-In 开发者可以根据情况快速的更新 App 的功能或者修正 bug。
+
+由于这个模型刚刚起步，在Office功能的自定义上稍显不足，更多地强调可以在Office中衔接Web技术。
+
+</p>
 						]]>
 						</Paragraph>
 					</SubSection>
 					<SubSection>
-						<Title>VSTO（Visual Studio Tools for Office）</Title>
+						<Title>利用VSTO 构建Office扩展功能</Title>
 						<Paragraph><![CDATA[
-						<p>
-						VSTO（Visual Studio Tools for Office ）是 VBA 的替代，使开发 Office 应用程序更加简单。
-						另外，使用 VSTO 来开发 Office 应用程序的开发者可以利用 Visual Studio 开发环境中的强大功能和 CLR 提供的内存管理，垃圾回收等功能，大大地提高开发效率。
-						</p>
-						<p>
-						VSTO 是一套用于创建自定义Office应用程序的Visual Studio工具包。
-						VSTO 使开发者可以用 Visual Basic 或者 Visual C# 扩展 Office 应用程序(例如Word、Excel、InfoPath和Outlook)的功能，
-						同时允许开发者直接利用Visual Studio开发环境来创建自定义程序。无论你是创建简单的数据录入应用程序还是复杂的企业解决方案，VSTO都使之变得容易。
-						VSTO还提供了增强的Office对象，开发者提供了更大的文档操作支持。例如，可以直接在Excel电子表格或者Word文档上添加.NET控件，也被称为 Windows Forms 控件，然后把数据直接绑定到控件上。
-						</p>
-						<p>
-						利用 VSTO 开发时，开发者在 Visual Studio 中利用各种模板创建项目，如下图所示。其中有针对Excel的外接程序(Add-Ins)，也有针对 Outlook 的外接程序。
-						<hr class="featurette-divider">
-						
-						<div class="row featurette">
-							<div class="col-md-12">
-							  <img class="featurette-image img-responsive center-block" src="../assets/images/vsto-office-addins-templates.png" alt="Generic placeholder image">
-							</div>
-						</div>
-						
-						<hr class="featurette-divider">
-						<p>
-						使用 VSTO 生成外接程序时，您会创建一个由 Microsoft Office 应用程序加载的托管代码程序集（managed code assembly）。 
-						加载了程序集之后，外接程序可以响应在 Office 应用程序中引发的事件（例如，用户单击菜单项时引发的事件）。 
-						外接程序也可以调入对象模型以便实现App程序的目的，并且它可以使用 .NET Framework 中的任何类。
-						托管代码程序集通过 Office 应用程序的主互操作程序集（PIA）与 Office 应用程序进行交互（基于 COM 的对象模型）。
-						</p>
-						<p>
-						创建新的 Office 项目时，Visual Studio 会添加对生成该项目所需的 PIA 的引用，例如下述代码中的 Microsoft.Office.Interop.Excel.dll。 在某些情况下，你可能需要添加对其他 PIA 的引用（例如，如果你希望在 Microsoft Office Excel 项目中使用 Microsoft Office Word 的功能）。
-						MSDN 中列出了可用于 Office 2013 和 Office 2010 的 <a href="https://msdn.microsoft.com/zh-cn/library/15s06t57.aspx" target="_blank">主互操作程序集</a>。
-						
-						<p>
-						<pre>
-						using System;
-						using System.Collections.Generic;
-						using System.Linq;
-						using System.Text;
-						using System.Xml.Linq;
-						// Microsoft Excel 对象库
-						using Excel = Microsoft.Office.Interop.Excel;
-						using Office = Microsoft.Office.Core;
-						using Microsoft.Office.Tools.Excel;
+<p>
+VSTO（也就是Visual Studio Tools for Office） 是一套用于创建自定义Office应用程序的Visual Studio工具包。VSTO借助于 .NET Framework去自定义和扩展 Office的功能。 VSTO 全面支持 C# 和Visual Basic 语言, 因此可以利用 .Net Framework 中常用的开发模型、工具和方法。VSTO 允许开发出的功能与Office 客户端程序紧密整合，不管是在使用的 APIs 上还是针对用户操作接口的自定义上。
+</p>
+<div class="row featurette">
+	<div class="col-md-4">
+	  <h4 class="featurette-heading demostep"></h4>
+	  <p class="lead">
+		如下图所示的是一个PowerPoint 中的 VSTO solution，它实现了一个自定义的Ribbon（上侧红框）、基于 Windows Presentation Foundation实现的任务面板（右侧红框）和浮动的Windows Form窗口。
+		</p>
+	</div>
+	<div class="col-md-8">
+	  <img class="featurette-image img-responsive center-block" src="../assets/images/compare_with_vba_and_vsto_examples_built-upon_vsto.png" alt="Generic placeholder image">
+	</div>
+</div>
+<p>
+利用 VSTO 开发时，开发者在 Visual Studio 中利用各种模板创建针对Excel/Outlook/InfoPath/Project/PowerPoint的扩展应用程序。利用模板创建新的 Office 项目后，Visual Studio 会添加对生成该项目所需的主互操作程序集（简称PIA） 的引用，比如说 Microsoft.Office.Interop.Excel.dll。 在某些情况下，你可能需要添加对其他 PIA 的引用（例如，如果你希望在 Microsoft Office Excel 项目中使用 Microsoft Office Word 的功能）。 MSDN 中列出了可用于 Office 2013 和 Office 2010 的 主互操作程序集。
 
-						namespace ExcelAddIn1
-						{
-							public partial class ThisAddIn
-							{
-								private void ThisAddIn_Startup(object sender, System.EventArgs e)
-								{
-								}
+当需要高度自定义Office功能或者针对Office 2007、2010及以下版本的富客户端开发扩展功能时，VSTO将是最好的选择。
 
-								private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
-								{
-								}
+基于VSTO的solution，其部署和更新依赖于各个企业的IT部门。另外，由于VSTO允许高度的自定义化，其运行需要和其他桌面程序一样的权限，因此可以访问文件系统，或与其他软件通信，所以IT部门或者用户个人需要自己衡量所要安装的VSTO solution 是否安全可靠。
 
-								#region VSTO generated code
+</p>
 
-								/// <summary>
-								/// Required method for Designer support - do not modify
-								/// the contents of this method with the code editor.
-								/// </summary>
-								private void InternalStartup()
-								{
-									this.Startup += new System.EventHandler(ThisAddIn_Startup);
-									this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
-								}
-								
-								#endregion
-							}
-						}
+<p><b>关于 VSTO 的更多细节：</b></p>
+<p>
+VSTO（Visual Studio Tools for Office ）是 VBA 的替代，使开发 Office 应用程序更加简单。
+另外，使用 VSTO 来开发 Office 应用程序的开发者可以利用 Visual Studio 开发环境中的强大功能和 CLR 提供的内存管理，垃圾回收等功能，大大地提高开发效率。
+</p>
+<p>
+VSTO 是一套用于创建自定义Office应用程序的Visual Studio工具包。
+VSTO 使开发者可以用 Visual Basic 或者 Visual C# 扩展 Office 应用程序(例如Word、Excel、InfoPath和Outlook)的功能，
+同时允许开发者直接利用Visual Studio开发环境来创建自定义程序。无论你是创建简单的数据录入应用程序还是复杂的企业解决方案，VSTO都使之变得容易。
+VSTO还提供了增强的Office对象，开发者提供了更大的文档操作支持。例如，可以直接在Excel电子表格或者Word文档上添加.NET控件，也被称为 Windows Forms 控件，然后把数据直接绑定到控件上。
+</p>
+<p>
+利用 VSTO 开发时，开发者在 Visual Studio 中利用各种模板创建项目，如下图所示。其中有针对Excel的外接程序(Add-Ins)，也有针对 Outlook 的外接程序。
+<hr class="featurette-divider">
 
-						</pre>
-						</p>
+<div class="row featurette">
+	<div class="col-md-12">
+	  <img class="featurette-image img-responsive center-block" src="../assets/images/vsto-office-addins-templates.png" alt="Generic placeholder image">
+	</div>
+</div>
+
+<hr class="featurette-divider">
+<p>
+使用 VSTO 生成外接程序时，您会创建一个由 Microsoft Office 应用程序加载的托管代码程序集（managed code assembly）。 
+加载了程序集之后，外接程序可以响应在 Office 应用程序中引发的事件（例如，用户单击菜单项时引发的事件）。 
+外接程序也可以调入对象模型以便实现App程序的目的，并且它可以使用 .NET Framework 中的任何类。
+托管代码程序集通过 Office 应用程序的主互操作程序集（PIA）与 Office 应用程序进行交互（基于 COM 的对象模型）。
+</p>
+<p>
+创建新的 Office 项目时，Visual Studio 会添加对生成该项目所需的 PIA 的引用，例如下述代码中的 Microsoft.Office.Interop.Excel.dll。 在某些情况下，你可能需要添加对其他 PIA 的引用（例如，如果你希望在 Microsoft Office Excel 项目中使用 Microsoft Office Word 的功能）。
+MSDN 中列出了可用于 Office 2013 和 Office 2010 的 <a href="https://msdn.microsoft.com/zh-cn/library/15s06t57.aspx" target="_blank">主互操作程序集</a>。
+
+<p>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Xml.Linq;
+// Microsoft Excel 对象库
+using Excel = Microsoft.Office.Interop.Excel;
+using Office = Microsoft.Office.Core;
+using Microsoft.Office.Tools.Excel;
+
+namespace ExcelAddIn1
+{
+	public partial class ThisAddIn
+	{
+		private void ThisAddIn_Startup(object sender, System.EventArgs e)
+		{
+		}
+
+		private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
+		{
+		}
+
+		#region VSTO generated code
+
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InternalStartup()
+		{
+			this.Startup += new System.EventHandler(ThisAddIn_Startup);
+			this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
+		}
+		
+		#endregion
+	}
+}
+
+</pre>
+</p>
 						]]>
 						</Paragraph>
 					</SubSection>
+					<SubSection>
+						<Title>VBA</Title>
+						<Paragraph><![CDATA[
+<p>
+VBA 是用来自动化Office 客户端软件内操作的工具。由于这项技术植根于 Visual Basic 6, 并在 Word和Excel中提供了宏录像(macro recorder)的支持, VBA 为自动化Office文档内的任务提供了可能。 不过由于历史久远, VBA 更多的是提供UI上的自定义上和整体上对工具框架的支持。
+
+VBA脚本可以存储分布在Office 文档中，这使得脚本的初次发布和传播比较容易，但是当文档通过邮件或其他方式广泛的传播和复制后，如果需要对脚本进行更改，就会变得非常麻烦。另外，VBA脚本可以做成应用程序级别的，不与特定的文档相关，这时则需要每个使用它的用户正确的安装到特定的目录下。
+
+Office 取得巨大成功的一个重要原因就是 VBA，使用VBA可以完成很多事情，基于Excel、Word的VBA小程序不计其数。 VBA 的语言入门门槛较低，而这些用户利用 VBA 解决的正式工作中关键问题。因此，VBA 程序大多作为部门内部或个人使用的小工具。
+</p>
+<p><b>关于 VBA 的更多细节：</b></p>
+<p>
+Visual Basic for Applications（简称VBA）是一种宏语言，由微软公司开发，可用来实现在微软桌面应用程序环境下的通用自动化(OLE)任务。
+主要能用来扩展 Windows 的应用程序功能，特别是针对 Microsoft Office 软件。
+微软在 1994 年发行的 Excel 5.0 版本中，即具备了 VBA 的宏功能。
+VBA 使可编程应用软件得到完美的实现，它作为一种通用的宏语言可被所有的微软可编程应用软件所共享。
+在Office 2000 中，宏语言 VBA 适用于所有应用程序，包括 Word 、 Excel、PowerPoint、Access、Outlook 以及Project。
+</p>
+<p>
+VBA 是基于 Visual Basic for Windows 发展而来的，它与传统的宏语言不同，传统的宏语言不具有高级语言的特征，没有面向对象的程序设计概念和方法。
+而VBA 提供了面向对象的程序设计方法，提供了相当完整的程序设计语言。
+VBA 易于学习掌握，可以使用宏记录器记录用户的各种操作并将其转换为VBA 程序代码。
+这样用户可以容易地将日常工作转换为VBA 程序代码，使工作自动化。
+因此，对于在工作中需要经常使用Office 套装软件的用户，学用VBA 有助于使工作自动化，提高工作效率。
+另外，由于VBA 可以直接应用Office 套装软件的各项强大功能，所以对于程序设计人员的程序设计和开发更加方便快捷。
+</p>
+<p>由于微软 Office 软件的普及，用户可在 Word、Excel、Access、Powerpoint 中利用 VBA 编写自定义的代码来扩展 Office 软件的功能，从而提升效率。
+例如：通过一段VBA代码，可以实现画面的切换或者实现复杂逻辑的统计等。
+Office 取得巨大成功的一个重要原因就是 VBA，使用VBA可以完成很多事情，基于Excel、Word的VBA小程序不计其数。
+VBA 的语言入门门槛较低，而这些用户利用 VBA 解决的正式工作中关键问题。因此，VBA 程序大多作为部门内部或个人使用的小工具。
+</p>
+						]]>
+						</Paragraph>
+					</SubSection>	
+					<SubSection>
+						<Title>另外</Title>
+						<Paragraph><![CDATA[
+<p>下表列出了微软官方对 Office 平台开发中涉及到概念的最新命名： </p>
+<table class="table table-striped">
+  <thead>
+  	<tr><th>原名</th><th>新名称</th><th>适用于</th></tr>
+  </thead>
+  <tbody>
+	<tr>
+	  <td>apps for Office</td>
+	  <td>Office Add-ins</td>
+	  <td>Office 2013 及 更新版本 （ 2013 app model）</td>
+	</tr>
+	<tr>
+	  <td>mail app for Outlook</td><td>Outlook Add-in</td><td>Office （2013 app model）</td>
+	</tr>
+	<tr>
+	  <td>app for Excel</td><td>Excel Add-in</td><td>Office （2013 app model）</td>
+	</tr>
+	<tr>
+	  <td>app for PowerPoint</td><td>PowerPoint Add-in</td><td>Office （2013 app model）</td>
+	</tr>
+	<tr>
+	  <td>app for Word</td><td>Word Add-in</td><td>Office （2013 app model）</td>
+	</tr>
+	<tr>
+	  <td>Office App Model</td><td>Office Add-in Model</td><td>Office （2013 app model）</td>
+	</tr>
+	<tr>
+	  <td>apps for SharePoint</td><td>SharePoint Add-ins</td><td>SharePoint (SharePoint 2013 app model)</td>
+	</tr>
+	<tr>
+	  <td>SharePoint App Model</td><td>SharePoint Add-in Model</td><td>SharePoint (SharePoint 2013 app model)</td>
+	</tr>
+	<tr>
+	  <td>app part</td><td>add-in part</td><td>SharePoint (SharePoint 2013 app model)</td>
+	</tr>
+	<tr>
+	  <td>app web</td><td>add-in web</td><td>SharePoint (SharePoint 2013 app model)</td>
+	</tr>
+  </tbody>
+</table>
+<p>
+ 为了防止使用过 VSTO 的开发者将新的 Add-In Model 与 以前的 Office Add-In 概念混淆，在 Office Developer Tools for Visual Studio 中（也就是用于在 Visual Studio 中创建 Office 扩展程序的项目模板）, 将老一代的基于 VSTO 实现的 Add-In 称为 VSTO Add-In；把新的 Model 下的 Add-In 称为 Web Add-In：
+</p>
+<table class="table table-striped">
+  <thead>
+  	<tr><th>项目模板类型</th><th>描述</th><th>举例</th></tr>
+  </thead>
+  <tbody>
+	<tr>
+	  <td>Office Web Add-ins</td>
+	  <td>Add-ins based on the web technologies provided by the new Office Add-in Model.
+		基于 Web 技术的 2013 app model
+	  </td>
+	  <td>Excel Web Add-in</td>
+	</tr>
+	<tr>
+	  <td>Office VSTO Add-ins</td>
+	  <td>Add-ins based on managed code technologies built with Visual Studio Tools for Office (VSTO).
+	  </td>
+      <td>Excel 2013 VSTO Add-in</td>
+	</tr>
+	<tr>
+	  <td>Office COM Add-ins</td>
+	  <td>Add-ins based on COM and VBA technology that extend applications by adding custom commands and specialized features.</td>
+	  <td>Excel 2013 COM Add-in</td>
+	</tr>
+  </tbody>
+</table>
+						]]>
+						</Paragraph>
+					</SubSection>					
 					<SubSection>
 						<Title>相关链接</Title>
 						<Paragraph><![CDATA[
@@ -695,7 +805,10 @@
 							  <td><a href="https://msdn.microsoft.com/zh-cn/library/15s06t57.aspx" target="_blank">Office 主互操作程序集</a></td>
 							</tr>
 							<tr>
-							  <td><a href="" target="_blank"></a></td>
+							  <td><a href="http://blogs.msdn.com/b/officeapps/archive/2013/06/18/roadmap-for-apps-for-office-vsto-and-vba.aspx" target="_blank">Roadmap for Apps for Office, VSTO, and VBA</a></td>
+							</tr>
+							<tr>
+							  <td><a href="https://msdn.microsoft.com/en-us/library/fp161507.aspx#bk_newname" target="_blank">New names for apps for Office and SharePoint</a></td>
 							</tr>
 						  </tbody>
 						</table>

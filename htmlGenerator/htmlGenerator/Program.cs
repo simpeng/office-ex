@@ -127,6 +127,7 @@ namespace htmlGenerator
             		}
             		pageContent = pageContent.Replace("SIMPENG-NET-OAI-PAGE-DOCUMENTCONTENT", documentContent.ToString());
             		pageContent = pageContent.Replace("SIMPENG-NET-OAI-PAGE-URL", hostprefx + chapterId + "/" + sectionName + ".html");
+            		pageContent = pageContent.Replace("SIMPENG-NET-OAI-PAGE-LAST-UPDATED-TIME", DateTime.Now.ToString());
             		File.WriteAllText( GetHtmlPageRelativePath(chapterId, sectionName), pageContent);
 				}
             	chapterIndex++;
