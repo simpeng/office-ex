@@ -175,7 +175,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="assets\images\visual-studio-develop-hello-world" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="assets\images\how_to_develop_office_addin_hello_world_projectfiles_intro.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

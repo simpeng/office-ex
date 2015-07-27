@@ -18,7 +18,7 @@ namespace htmlGenerator
 	{
 		//Office 2013 App,Office 应用, Office 开发, 
 		private const string globalKeywords = @"Office 开发，Office 扩展应用（Office 2013 Apps，Office 2013 AddIns，Apps for Office）开发，simpeng";
-		private const string navarBand = "Office 扩展应用（Office Apps，Office 2013 AddIns，Apps for Office）平台开发 —— 中文文档";
+		private const string navarBand = "Office Add-Ins（Apps for Office）开发 —— 中文文档";
 		private const string hostprefx= "http://simpeng.net/oai/";
 		
 		public static void Main(string[] args)
